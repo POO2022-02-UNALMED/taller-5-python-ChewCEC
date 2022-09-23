@@ -10,6 +10,9 @@ class Animal (Zona):
         self._zona = None
         __totalAnimales += 1
     
+    def cantidadTotalAnimales():
+        return Zona.__totalAnimales
+
     def movimiento ():
         pass
 
@@ -18,6 +21,18 @@ class Animal (Zona):
 
     def __str__(self):
         pass
+
+# Para la clase Animal tenemos ciertas particularidades, queremos llevar el conteo del
+# total de animales creados y que este valor podamos almacenarlo en el atributo
+# totalAnimales, el método totalPorTipo, devolverá el siguiente formato con la
+# cantidad de animales por cada subclase de animales:
+# “Mamiferos: #
+# Aves: #
+# Reptiles: #
+# Peces: #
+# Anfibios: #“
+# # es el numero de animales por cada subclase
+
 
     def setNombre (self, nombre):
         self._nombre = nombre
