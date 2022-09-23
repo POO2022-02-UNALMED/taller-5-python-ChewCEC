@@ -1,6 +1,11 @@
-from zona import Zona
+from zooAnimales.mamifero import Mamifero
+from zooAnimales.ave import Ave
+from zooAnimales.reptil import Reptil
+from zooAnimales.pez import Pez
+from zooAnimales.anfibio import Anfibio
 
-class Animal (Zona):
+class Animal ():
+
     _totalAnimales = 0
     def __init__ (self, nombre, edad, habitat, genero):
         self._nombre = nombre
@@ -11,16 +16,19 @@ class Animal (Zona):
         __totalAnimales += 1
     
     def cantidadTotalAnimales():
-        return Zona.__totalAnimales
+        return Animal.__totalAnimales
 
     def movimiento ():
         pass
 
-    def totalPorTipo ():
-        pass
+    @classmethod
+    def totalPorTipo (cls):
+        return f"Mamiferos: {Mamifero.cantidadMemiferos()} \nAves: {Ave.cantidadAves()} \nReptiles: {Reptil.cantidadReptiles()} \nPeces: {Pez.cantidadPeces()} \nAnfibios: {Anfibio.cantidadAnfibios()}"
 
-    def __str__(self):
-        pass
+    def toString(self):
+        if len(self._zona) == 0:
+            return "Mi nombre es " + self.getNombre() + ", tengo una edad de " + str(self.getEdad()) + ", habito en " + self.getHabitat() + " y mi genero es " + self.getGenero()
+        return "Mi nombre es " + self.getNombre() + ", tengo una edad de " + str(self.getEdad()) + ", habito en " + self.getHabitat() + " y mi genero es " + self.getGenero() + ", la zona en la que me ubico es " + self._zona[0].getNombre() + ", en el " + self._zona[0].getZoo().getNombre()
 
 # Para la clase Animal tenemos ciertas particularidades, queremos llevar el conteo del
 # total de animales creados y que este valor podamos almacenarlo en el atributo
@@ -64,6 +72,4 @@ class Animal (Zona):
     
     def getZona (self):
         return self._zona
-    
-
     
