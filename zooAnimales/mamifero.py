@@ -12,7 +12,7 @@ class Mamifero (Animal):
         Mamifero._listado.append(self) 
         
 
-    def cantidadMemiferos():
+    def cantidadMamiferos():
         return (Mamifero.caballos + Mamifero.leones)
 
     @classmethod
