@@ -19,7 +19,7 @@ class Ave (Animal):
 
     @classmethod
     def crearHalcon(cls, nombre, edad, genero ):
-        nHalcones += 1
+        halcones += 1
         cls.__init__(cls, nombre, edad, "montañas", genero, "cafe glorioso")
 
     @classmethod
