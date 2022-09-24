@@ -24,11 +24,12 @@ class Reptil (Animal):
         iguanas = Reptil(nombre, edad, "humedal", genero, "verde", 3)
         return iguanas
 
+    @classmethod
     def crearSerpiente (cls, nombre, edad, genero):
         cls.serpientes += 1
-        serpientes = Reptil(nombre, edad, "jungla", genero, "blanco", 1)
-        return serpientes
-        
+        serpiente = Reptil(nombre, edad, "jungla", genero, "blanco", 1)
+        return serpiente
+
 # setters and getters for largoCola and listado and colorEscamas
     def setLargoCola (self, largoCola):
         self._largoCola = largoCola
