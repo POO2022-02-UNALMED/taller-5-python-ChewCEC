@@ -28,7 +28,7 @@ class Reptil (Animal):
         cls.serpientes += 1
         cls.__init__(nombre, edad, "jungla", genero, "blanco", 1)
 
-# setters and getters for largoCola and listado
+# setters and getters for largoCola and listado and colorEscamas
     def setLargoCola (self, largoCola):
         self._largoCola = largoCola
 
@@ -40,6 +40,13 @@ class Reptil (Animal):
     
     def getListado (self):
         return self._listado
+
+    def setColorEscamas (self, colorEscamas):
+        self._colorEscamas = colorEscamas
+    
+    def getColorEscamas (self):
+        return self._colorEscamas
+
     
 # La clase Reptil tendrá algunos comportamientos particulares, en
 # el atributo iguanas y serpientes se quiere llevar el conteo de

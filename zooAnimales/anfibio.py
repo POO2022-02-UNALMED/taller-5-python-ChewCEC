@@ -19,8 +19,9 @@ class Anfibio(Animal):
 
     @classmethod
     def crearRana(cls, nombre, edad, genero):
-        cls.__init__(nombre, edad, "selva", genero, "rojo", True)
+        rana = Anfibio(nombre, edad, "selva", genero, "rojo", True)
         cls.ranas += 1
+        return rana
 
     @classmethod
     def crearSalamandra(cls, nombre, edad, genero):
@@ -46,7 +47,7 @@ class Anfibio(Animal):
     def setVenenoso (self, venenoso):
         self._venenoso = venenoso
 
-    def getVenenoso (self):
+    def isVenenoso (self):
         return self._venenoso
 
     def setListado (self, listado):
