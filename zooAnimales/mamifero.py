@@ -26,10 +26,10 @@ class Mamifero (Animal):
         cls.__init__(cls, nombre , edad, "Selva", genero, True, 4)
     
     # setters and getters for pelaje and patas
-    def isPelaje (self, pelaje):
+    def setPelaje (self, pelaje):
         self._pelaje = pelaje
 
-    def getPelaje (self):
+    def isPelaje (self):
         return self._pelaje
     
     def setPatas (self, patas):

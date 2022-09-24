@@ -25,9 +25,9 @@ class Anfibio(Animal):
 
     @classmethod
     def crearSalamandra(cls, nombre, edad, genero):
-        cls.__init__(nombre, edad, "selva", genero, "negro y amarillo", False)
+        salamandra = Anfibio(nombre, edad, "selva", genero, "negro y amarillo", False)
         cls.salamandras += 1
-
+        return salamandra
 # Para la clase Anfibio el método crearRana, creará un Anfibio
 # con los valores para colorPiel = “rojo”, venenoso = true y hábitat
 # = “selva”, los demás valores los recibirá como parámetros.
