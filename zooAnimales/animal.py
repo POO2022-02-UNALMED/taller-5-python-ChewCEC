@@ -8,10 +8,10 @@ class Animal():
         self._habitat = habitat
         self._genero = genero
         self._zona = None
-        __totalAnimales += 1
+        _totalAnimales += 1
     
     def cantidadTotalAnimales():
-        return Animal.__totalAnimales
+        return Animal._totalAnimales
 
     def movimiento ():
         pass
