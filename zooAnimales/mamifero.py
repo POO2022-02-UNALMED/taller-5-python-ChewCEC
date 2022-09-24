@@ -17,12 +17,12 @@ class Mamifero (Animal):
 
     @classmethod
     def crearCaballo(cls, nombre, edad, genero):
-        caballos+=1
         cls.__init__(cls, nombre , edad, "Pradera", genero, True, 4)
+        cls.caballos+=1
     
     @classmethod
     def crearLeon(cls, nombre, edad, genero):
-        leones+=1
+        cls.leones+=1
         cls.__init__(cls, nombre , edad, "Selva", genero, True, 4)
     
     # setters and getters for pelaje and patas

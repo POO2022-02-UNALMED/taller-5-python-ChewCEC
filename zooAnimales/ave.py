@@ -19,12 +19,12 @@ class Ave (Animal):
 
     @classmethod
     def crearHalcon(cls, nombre, edad, genero ):
-        halcones += 1
+        cls.halcones += 1
         cls.__init__(cls, nombre, edad, "montañas", genero, "cafe glorioso")
 
     @classmethod
     def crearAguila(cls, nombre, edad, genero ):
-        aguilas += 1
+        cls.aguilas += 1
         cls.__init__(cls, nombre, edad, "montañas", genero, "blanco y amarillo")
     
     # setters and getters for colorPlumas and listado
