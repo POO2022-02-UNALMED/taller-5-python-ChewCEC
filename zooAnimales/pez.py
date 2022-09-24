@@ -18,15 +18,18 @@ class Pez (Animal):
     def movimiento():
         pass
 
-    def crearSalmones(cls, nombre, edad,  genero):
-        cls.__init__(nombre, edad,"oceano", genero, "rojo", 6)
+    def crearSalmone(cls, nombre, edad,  genero):
+        salmon = Pez(nombre, edad,"oceano", genero, "rojo", 6)
         cls.salmones += 1
-        
-    def crearBacalaos(cls, nombre, edad,  genero):
-        cls.__init__(nombre, edad,"oceano", genero, "gris", 6)  
+        return salmon
+
+    def crearBacalao(cls, nombre, edad,  genero):
+        bacalo = Pez(nombre, edad,"oceano", genero, "gris", 6)  
         cls.bacalaos += 1
+        return bacalo
 
     # setters and getters for colorEscamas, cantidadAletas and listado
+    
     def setColorEscamas (self, colorEscamas):
         self._colorEscamas = colorEscamas
     

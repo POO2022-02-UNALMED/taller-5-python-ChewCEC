@@ -20,13 +20,15 @@ class Ave (Animal):
     @classmethod
     def crearHalcon(cls, nombre, edad, genero ):
         cls.halcones += 1
-        cls.__init__(cls, nombre, edad, "montañas", genero, "cafe glorioso")
+        halcon = Ave(cls, nombre, edad, "montañas", genero, "cafe glorioso")
+        return halcon
 
     @classmethod
     def crearAguila(cls, nombre, edad, genero ):
         cls.aguilas += 1
-        cls.__init__(cls, nombre, edad, "montañas", genero, "blanco y amarillo")
-    
+        aguila = Ave(cls, nombre, edad, "montañas", genero, "blanco y amarillo")
+        return aguila
+        
     # setters and getters for colorPlumas and listado
     def setColorPlumas (self, colorPlumas):
         self._colorPlumas = colorPlumas
