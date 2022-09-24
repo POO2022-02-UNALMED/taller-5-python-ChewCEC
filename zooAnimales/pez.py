@@ -18,12 +18,13 @@ class Pez (Animal):
     def movimiento():
         pass
 
-    
+    @classmethod
     def crearSalmon(cls, nombre, edad,  genero):
         salmon = Pez(nombre, edad,"oceano", genero, "rojo", 6)
         cls.salmones += 1
         return salmon
 
+    @classmethod
     def crearBacalao(cls, nombre, edad,  genero):
         bacalo = Pez(nombre, edad,"oceano", genero, "gris", 6)  
         cls.bacalaos += 1
