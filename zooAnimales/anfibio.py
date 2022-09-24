@@ -1,4 +1,4 @@
-from animal import Animal
+from zooAnimales.animal import Animal
 
 class Anfibio(Animal):
     _listado = []
@@ -17,10 +17,12 @@ class Anfibio(Animal):
     def movimiento():
         pass
 
+    @classmethod
     def crearRana(cls, nombre, edad, genero):
         cls.__init__(nombre, edad, "selva", genero, "rojo", True)
         cls.ranas += 1
 
+    @classmethod
     def crearSalamandra(cls, nombre, edad, genero):
         cls.__init__(nombre, edad, "selva", genero, "negro y amarillo", False)
 
